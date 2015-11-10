@@ -1,0 +1,27 @@
+<h1>Resumen de Reclamo a Tiendas</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th class="info">Recla</th>
+      <th class="info">Tienda</th>
+      <th class="info" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reclamo_tiendas.each do |reclamo_tienda| %>
+      <tr>
+        <td class="success"><%= reclamo_tienda.recla %></td>
+        <td class="success"><%= reclamo_tienda.tienda %></td>
+        <td class="success"><%= link_to 'Show', reclamo_tienda %></td>
+        <td class="success"><%= link_to 'Edit', edit_reclamo_tienda_path(reclamo_tienda) %></td>
+        <td class="success"><%= link_to 'Destroy', reclamo_tienda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reclamo tienda', new_reclamo_tienda_path %>

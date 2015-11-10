@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tienda:</strong>
+  <%= @recla.tienda %>
+</p>
+
+<p>
+  <strong>Reclam:</strong>
+  <%= @recla.reclam %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @recla.cliente %>
+</p>
+
+<%= link_to 'Edit', edit_recla_path(@recla) %> |
+<%= link_to 'Back', reclas_path %>

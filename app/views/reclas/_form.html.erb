@@ -1,0 +1,29 @@
+<%= form_for(@recla) do |f| %>
+  <% if @recla.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recla.errors.count, "error") %> prohibited this recla from being saved:</h2>
+
+      <ul>
+      <% @recla.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tienda %><br>
+    <%= f.text_field :tienda %>
+  </div>
+  <div class="field">
+    <%= f.label :reclam %><br>
+    <%= f.text_field :reclam %>
+  </div>
+  <div class="field">
+    <%= f.label :cliente_id %><br>
+    <%= f.text_field :cliente_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
